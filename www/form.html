@@ -6,26 +6,29 @@
     <script type="text/javascript" src="js/geturi.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        var id_baak = decodeURI(getUrlVars()["id_baak"]);
+        var id_baak= decodeURI(getUrlVars()["id_baak"]);
         var nama_baak = decodeURI(getUrlVars()["nama_baak"]);
         var email = decodeURI(getUrlVars()["email"]);
         var telp = decodeURI(getUrlVars()["telp"]);
-		        var alamat = decodeURI(getUrlVars()["alamat"]);
+        var alamat = decodeURI(getUrlVars()["alamat"]);
+        
         $("#id_baak").val(id_baak);
         $("#nama_baak").val(nama_baak);
         $("#email").val(email);
         $("#telp").val(telp);
-		$("#alamat").val(alamat);
+        $("#alamat").val(alamat);
+        
         $("#update").click(function() {
             var id_baak = $("#id_baak").val();
             var nama_baak = $("#nama_baak").val();
             var email = $("#email").val();
             var telp = $("#telp").val();
-		var alamat = $("#alamat").val();
-            var dataString = "&id_baak=" + id_baak + "&nama_baak=" + nama_baak + "&email=" + email + "&telp=" + telp + "&alamat=" + alamat +"&update=";
+            var alamat = $("#alamat").val();
+            
+            var dataString = "id_baak=" + id_baak + "&nama_baak=" + nama_baak + "&email=" + email +"&telp=" + telp +  "&alamat=" + alamat +  "&update=";
             $.ajax({
                 type: "POST",
-                url: "https://sudrmwn.000webhostapp.com/cordova/cordova/www/update.php",
+                url: "https://sisfopkl.000webhostapp.com/cordova/cordova/appcordova-master/www/update.php",
                 data: dataString,
                 crossDomain: true,
                 cache: false,
@@ -48,7 +51,7 @@
             var dataString = "id_baak=" + id_baak + "&delete=";
             $.ajax({
                 type: "GET",
-                url: "https://sudrmwn.000webhostapp.com/cordova/cordova/www/delete.php",
+                url: "https://sisfopkl.000webhostapp.com/cordova/cordova/appcordova-master/www/delete.php",
                 data: dataString,
                 crossDomain: true,
                 cache: false,
@@ -79,27 +82,31 @@
     <br/>
     <br/>
     <div class="list">
-        <input type="hidden" id="id" value="" />
-             <div class="item">
+       
+        <div class="item">
             <label>id_baak</label>
             <input type="text" id="id_baak" value="" />
         </div>
-		<div class="item">
+        <div class="item">
             <label>nama_baak</label>
             <input type="text" id="nama_baak" value="" />
         </div>
+
         <div class="item">
             <label>email</label>
             <input type="text" id="email" value="" />
         </div>
+
         <div class="item">
             <label>telp</label>
             <input type="text" id="telp" value="" />
         </div>
-		        <div class="item">
+        
+        <div class="item">
             <label>alamat</label>
             <input type="text" id="alamat" value="" />
         </div>
+       
         <div class="item">
             <input type="button" id="update" class="button button-block" value="Update" />
             <input type="button" id="delete" class="button button-block" value="Delete" />
