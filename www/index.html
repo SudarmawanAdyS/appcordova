@@ -11,7 +11,7 @@
             var email = $("#email").val();
             var telp = $("#telp").val();
 			var alamat = $("#alamat").val();
-            var dataString = "id_baak=" + id_baak +"nama_baak=" + nama_baak + "&email=" + email + "&telp=" + telp + "&alamat=" + alamat +"&insert=";
+            var dataString = "&id_baak=" + id_baak +"&nama_baak=" + nama_baak + "&email=" + email + "&telp=" + telp + "&alamat=" + alamat +"&insert=";
             if ($.trim(id_baak).length > 0 & $.trim(nama_baak).length > 0 & $.trim(email).length > 0 & $.trim(telp).length > 0 & $.trim(alamat).length > 0) {
                 $.ajax({
                     type: "POST",
