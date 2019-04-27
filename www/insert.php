@@ -2,7 +2,7 @@
  include "db.php";
  if(isset($_POST['insert']))
  {
- $id_baak=$_POST['title'];
+ $id_baak=$_POST['id_baak'];
  $nama_baak=$_POST['duration'];
  $email=$_POST['email'];
    $telp=$_POST['telp'];
