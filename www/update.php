@@ -7,7 +7,7 @@
  $email=$_POST['email'];
  $telp=$_POST['telp'];
   $alamat=$_POST['alamat'];
- $q=mysqli_query($con,"UPDATE `baak` SET `nama_baak`='$nama_baak',`email`='$email',`telp`='$telp',`alamat`='$alamat' where `id_baak`='$id_baak'");
+ $q=mysqli_query($con,"UPDATE `baak` SET `id_baak`='$id_baak',`nama_baak`='$nama_baak',`email`='$email',`telp`='$telp',`alamat`='$alamat' where `id_baak`='$id_baak'");
  if($q)
  echo "success";
  else
