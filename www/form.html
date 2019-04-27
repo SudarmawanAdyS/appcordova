@@ -21,7 +21,8 @@
             var nama_baak = $("#nama_baak").val();
             var email = $("#email").val();
             var telp = $("#telp").val();
-            var dataString = "id_baak=" + id_baak + "&nama_baak=" + nama_baak + "&email=" + email + "&telp=" + telp + "&alamat=" + alamat +"&update=";
+		var alamat = $("#alamat").val();
+            var dataString = "&id_baak=" + id_baak + "&nama_baak=" + nama_baak + "&email=" + email + "&telp=" + telp + "&alamat=" + alamat +"&update=";
             $.ajax({
                 type: "POST",
                 url: "https://sudrmwn.000webhostapp.com/cordova/cordova/www/update.php",
@@ -78,10 +79,10 @@
     <br/>
     <br/>
     <div class="list">
-        <input type="hidden" id="id_baak" value="" />
+        <input type="hidden" id="id" value="" />
              <div class="item">
             <label>id_baak</label>
-            <input type="text" id="nama_baak" value="" />
+            <input type="text" id="id_baak" value="" />
         </div>
 		<div class="item">
             <label>nama_baak</label>
