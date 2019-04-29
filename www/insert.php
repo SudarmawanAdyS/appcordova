@@ -2,13 +2,14 @@
  include "db.php";
  if(isset($_POST['insert']))
  {
- $id_baak=$_POST['id_baak'];
- $nama_baak=$_POST['nama_baak'];
- $email=$_POST['email'];
- $telp=$_POST['telp'];
- $alamat=$_POST['alamat'];
  
- $q=mysqli_query($con,"INSERT INTO `baak` (`id_baak`,`nama_baak`,`email`,`telp`,`alamat`) VALUES ('$id_baak','$nama_baak','$email','$telp','$alamat')");
+$nip=$_POST['nip'];
+ $nama=$_POST['nama'];
+ $telp=$_POST['telp'];
+ $email=$_POST['email'];
+   $alamat=$_POST['alamat'];
+   
+ $q=mysqli_query($con,"INSERT INTO `progdi` (`nip`,`nama`,`telp`,`email`,`alamat`) VALUES ('$nip','$nama','$telp','$email','$alamat')");
  if($q)
   echo "success";
  else
