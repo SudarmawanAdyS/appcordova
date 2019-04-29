@@ -5,17 +5,17 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        var url = "https://sisfopkl.000webhostapp.com/cordova/cordova/appcordova-master/www/json.php";
+        var url = "https://sudrmwn.000webhostapp.com/cordova/cordova/www/json.php";
         $.getJSON(url, function(result) {
             console.log(result);
             $.each(result, function(i, field) {
-                var id_baak = field.id_baak;
-                var nama_baak = field.nama_baak;
+                var nip = field.nip;
+                var nama = field.nama;
                 var telp = field.telp;
                 var email = field.email;
                 var alamat = field.alamat;
                 
-                $("#listview").append("<a class='item' href='form.html?id_baak=" + id_baak + "&nama_baak=" + nama_baak +  "&email=" + email +"&telp=" + telp + "&alamat=" + alamat +  "'><span class='item-note'>" + alamat + "</span><h2>" + nama_baak + " </h2><p>" + email + "</p></a>");
+                $("#listview").append("<a class='item' href='form.html?nip=" + nip + "&nama=" + nama + "&telp=" + telp + "&email=" + email + "&alamat=" + alamat +  "'><span class='item-note'>" + alamat + "</span><h2>" + nama + " </h2><p>" + email + "</p></a>");
     
                 
             });
