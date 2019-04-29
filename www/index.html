@@ -6,17 +6,17 @@
     <script type="text/javascript">
     $(document).ready(function() {
         $("#insert").click(function() {
-            var id_baak= $("#id_baak").val();
-            var nama_baak = $("#nama_baak").val();
+            var nip= $("#nip").val();
+            var nama = $("#nama").val();
             var email = $("#email").val();
             var telp = $("#telp").val();
             var alamat = $("#alamat").val();
             
-            var dataString = "id_baak=" + id_baak + "&nama_baak=" + nama_baak + "&email=" + email +"&telp=" + telp +  "&alamat=" + alamat +  "&insert=";
-            if ($.trim(id_baak).length > 0 & $.trim(nama_baak).length > 0 & $.trim(email).length > 0 & $.trim(telp).length > 0  & $.trim(alamat).length > 0 ) {
+            var dataString = "nip=" + nip + "&nama=" + nama +"&telp=" + telp +  "&email=" + email + "&alamat=" + alamat +  "&insert=";
+            if ($.trim(nip).length > 0 & $.trim(nama).length > 0  & $.trim(telp).length > 0 & $.trim(email).length > 0  & $.trim(alamat).length > 0 ) {
                 $.ajax({
                     type: "POST",
-                    url: "https://sisfopkl.000webhostapp.com/cordova/cordova/appcordova-master/www/insert.php",
+                    url: "https://sudrmwn.000webhostapp.com/cordova/cordova/www/insert.php",
                     data: dataString,
                     crossDomain: true,
                     cache: false,
@@ -49,20 +49,21 @@
     <div class="list">
         
         <div class="item">
-            <label>id_baak</label>
-            <input type="text" id="id_baak" value="" />
+            <label>nip</label>
+            <input type="text" id="nip" value="" />
         </div>
         <div class="item">
-            <label>nama_baak</label>
-            <input type="text" id="nama_baak" value="" />
+            <label>nama</label>
+            <input type="text" id="nama" value="" />
+        </div>
+
+        <div class="item">
+            <label>Telp</label>
+            <input type="text" id="telp" value="" />
         </div>
         <div class="item">
             <label>Email</label>
             <input type="text" id="email" value="" />
-        </div>
-        <div class="item">
-            <label>Telp</label>
-            <input type="text" id="telp" value="" />
         </div>
         <div class="item">
             <label>Alamat</label>
